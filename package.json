@@ -1,0 +1,25 @@
+{
+  "name": "kv-store-benchmarking",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.8.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^6.0.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/k6": "^2.0.0",
+    "@types/pg": "^8.20.0",
+    "express": "^5.2.1",
+    "k6": "^0.0.0",
+    "pg": "^8.20.0"
+  }
+}
