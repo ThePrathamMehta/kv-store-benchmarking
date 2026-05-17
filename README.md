@@ -8,7 +8,7 @@ docker ps
 
 # 3. Start API Server
 
-npm run dev
+bun run dev
 
 # 4. Run Load Test
 
