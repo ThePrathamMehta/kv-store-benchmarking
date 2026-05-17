@@ -12,7 +12,9 @@ app.put("/kv/:key", async (req, res) => {
 
   const ttl = req.body.ttl_sec;
 
-  const expiredAt = new Date(Date.now() + ttl * 1000);
+  const expiredAt = new Date(
+    Date.now() + ttl * 1000
+  ).toISOString();
 
   await shard.query(
     `
@@ -26,7 +28,9 @@ app.put("/kv/:key", async (req, res) => {
     [key, req.body.value, expiredAt]
   );
 
-  res.json({ success: true });
+  res.json({
+    success: true,
+  });
 });
 
 app.listen(3000, () => {
